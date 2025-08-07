@@ -5995,7 +5995,7 @@ uint64_t Player::getGainedExperience(const std::shared_ptr<Creature> &attacker) 
 	if (g_configManager().getBoolean(EXPERIENCE_FROM_PLAYERS)) {
 		const auto &attackerPlayer = attacker->getPlayer();
 		if (attackerPlayer && attackerPlayer.get() != this && skillLoss && std::abs(static_cast<int32_t>(attackerPlayer->getLevel() - level)) <= g_configManager().getNumber(EXP_FROM_PLAYERS_LEVEL_RANGE)) {
-			return std::max<uint64_t>(0, std::floor(getLostExperience() * getDamageRatio(attacker) * 0.05));
+			return std::max<uint64_t>(0, std::floor(getLostExperience() * getDamageRatio(attacker) * 0.03));
 		}
 	}
 	return 0;
