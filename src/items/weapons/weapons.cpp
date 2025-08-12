@@ -905,7 +905,7 @@ int32_t WeaponDistance::getWeaponDamage(const std::shared_ptr<Player> &player, c
 	const int32_t attackSkill = player->getSkillLevel(SKILL_DISTANCE);
 	const float attackFactor = player->getAttackFactor();
 
-	int32_t minValue = player->getLevel() / 5;
+	int32_t minValue = player->getLevel() / 2;
 	int32_t maxValue = std::round((0.09f * attackFactor) * attackSkill * attackValue + minValue);
 	if (maxDamage) {
 		return -maxValue;
