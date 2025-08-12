@@ -53,7 +53,8 @@ public:
 	WeaponShared_ptr getWeapon(const std::shared_ptr<Item> &item) const;
 
 	static int32_t getMaxMeleeDamage(int32_t attackSkill, int32_t attackValue);
-	static int32_t getMaxWeaponDamage(uint32_t level, int32_t attackSkill, int32_t attackValue, float attackFactor, bool isMelee);
+	static int32_t getMaxWeaponDamage(uint32_t level, int32_t attackSkill, int32_t attackValue, float attackFactor);
+	static int32_t getMinWeaponDamage(uint32_t level, int32_t attackSkill, int32_t attackValue, float attackFactor);
 
 	bool registerLuaEvent(const WeaponShared_ptr &event, bool fromXML = false);
 	void clear(bool isFromXML = false);
